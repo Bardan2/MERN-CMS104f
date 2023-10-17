@@ -1,16 +1,16 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
 
-const blogSchema = new Schema(
+const mongoose = require("mongoose");
+
+const blogSchema = new mongoose.Schema(
   {
     title: {
       type: String,
     },
-    subtitle: {
+    subTitle: {
       type: String,
     },
     description: {
-      type: Data,
+      type: String,
     },
   },
   {
@@ -18,4 +18,6 @@ const blogSchema = new Schema(
   }
 );
 
-const Blog = mongoose;
+const Blog = mongoose.model("Blog", blogSchema);
+
+module.exports = Blog;
